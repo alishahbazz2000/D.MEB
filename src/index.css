@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+    }
+
+
+    @font-face {
+        font-family: 'iranSans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(./assets/fonts/IRANSans-Medium-web.eot);
+        src: url(./assets/fonts/IRANSans-Medium-web.eot) format('eot'),
+        url(./assets/fonts/IRANSans-Medium-web.woff2) format('woff2'),
+        url(./assets/fonts/IRANSans-Medium-web.woff) format('woff'),
+        url(./assets/fonts/IRANSans-Medium-web.ttf) format('truetype');
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border !scroll-smooth;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    button {
+        @apply active:outline-none;
+    }
+}
+
+@layer utilities {
+    .heading {
+        @apply font-bold text-4xl md:text-4xl text-center;
+    }
+}
+
+@layer components {
+    .iconFooter {
+        @apply relative  rounded-full m-4 w-10 h-10 flex flex-col items-center justify-center cursor-pointer text-white border-2 border-white hover:border-0 transition-all duration-100 ;
+    }
+
+    .tooltipSocial {
+        @apply absolute top-0 text-xs bg-white py-1 px-2 rounded shadow opacity-0 pointer-events-none transition-all duration-300 before:absolute before:h-4 before:w-4 before:bg-white before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:rotate-45 before:transition-all before:duration-300 before:-z-10 group-hover:-top-[30px] group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto;
+    }
+}
+
+
+
+
+
+
+
+
+
